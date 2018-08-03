@@ -1,0 +1,33 @@
+{% extends 'blog/base.html' %}
+{% block titulo %}
+	Biblioteca Proteco 
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+	<h3>Biblioteca</h3>
+	<h4>Editores</h4>
+	<table class="table">
+		<thead>
+			<tr> <!--table row-->
+				<th>ID</th><!--table header-->
+				<th>Nombre</th>
+				<th>Ciudad</th>
+				<th>Domicilio</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for ed in editors %}
+			<tr>
+				<td>{{ed.id }}</td><!--table data-->
+				<td>{{ ed.nombre }}</td> <!--variables con doble parentesis-->
+				<td>{{ ed.ciudad }}</td>
+				<td>{{ed.domicilio}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+{% endblock %}

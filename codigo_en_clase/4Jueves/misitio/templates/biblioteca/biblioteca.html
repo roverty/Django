@@ -1,0 +1,63 @@
+{% extends 'blog/base.html' %}
+{% block titulo %}
+Biblioteca Proteco 
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+	<h3>Biblioteca</h3>
+	<h4>Editores</h4>
+	<table class="table">
+		<thead>
+			<tr> <!--table row-->
+				<th>ID</th><!--table header-->
+				<th>Nombre</th>
+				<th>Ciudad</th>
+				<th>Domicilio</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for ed in editors %}
+			<tr>
+				<td>{{ed.id }}</td><!--table data-->
+				<td>{{ ed.nombre }}</td> <!--variables con doble parentesis-->
+				<td>{{ ed.ciudad }}</td>
+				<td>{{ed.domicilio}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<h4>Libros</h4>
+	<table class="table">
+		<thead>
+			<tr> <!--table row-->
+				<th>Titulo</th><!--table header-->
+				<th>imagen</th>
+				<th>Fecha de publicación</th>
+				<th>Editor</th>
+				<th>Autores</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for lib in libros %}
+			<tr>
+				<td>{{ lib.titulo }}</td><!--table data-->
+				<td><img src="{{ lib.imagen.url }}" width="70px"></td> <!--variables con doble parentesis-->
+				<td>{{ lib.fecha_publicacion }}</td>
+				<td>{{ lib.editor }}</td>
+				<td>
+					<ul>{% for au in lib.autores.all %}
+						<li> {{ au }} </li>
+						{% endfor %}
+					</ul>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</div>
+
+{% endblock %}

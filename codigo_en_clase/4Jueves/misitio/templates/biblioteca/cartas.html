@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% block titulo %}
+Biblioteca Proteco 
+{% endblock %}
+
+{% block content %}
+<div class="container" style="margin-top: 50px">
+	{% for lib in libros %}
+	<div class="row">
+		<div class="col s12 m7">
+			<div class="card">
+				<div class="card-image">
+					<img src="{{ lib.imagen.url }}">
+				</div>
+				<div class="card-content">
+					<h6 class="card-title">{{lib.titulo}}</h6>
+					{{lib.editor}}
+				</div>
+				<div class="card-action">
+					<a href="#">This is a link</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}
