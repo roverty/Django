@@ -21,6 +21,7 @@ Basic knowlegde of
 * django v2.0
 * html v5
 * css v3
+* materializecss v1.0.0rc-2
 
 ## Course date
 
