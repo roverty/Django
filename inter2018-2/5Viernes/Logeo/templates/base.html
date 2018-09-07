@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Login</title>
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com\icon?family=Material+Icons">
+</head>
+<nav>
+    <div class="nav-wrapper #f48fb1 pink lighten-3">
+        <a href="{% url 'index' %}" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="{% url 'login' %}">Sesión</a></li>
+        </ul>
+    </div>
+</nav>
+<ul class="sidenav #fce4ec pink lighten-5" id="mobile-demo">
+    <li><a href="{% url 'login' %}">Sesión</a></li>
+</ul>
+{% for message in messages %}
+    <center>
+        <h1>{{ message }}</h1>
+    </center>
+{% endfor %}
+
+{% block content %}
+
+
+
+{% endblock %}
+
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+<script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/add.js' %}"></script>
+</html>

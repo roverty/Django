@@ -1,0 +1,17 @@
+<!--{% load static %}-->
+
+<nav>
+	<div class="nav-wrapper indigo darken-4">
+		<a href="{% url 'inicio' %}" class="brand-logo">
+			<img src="{% static 'media/proteco.png' %}">
+		</a>
+		<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+		<ul class="right hide-on-med-and-down">
+			{% include 'partials/navbar-items.html' %}
+		</ul>
+	</div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+	{% include 'partials/navbar-items.html' %}
+</ul>

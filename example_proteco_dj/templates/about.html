@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block titulo %}About{% endblock %}
+{% block contenido %}
+{% load static %}
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<center><h1>Programa de Tecnología en Cómputo</h1></center>
+			<br>
+		</div>
+	</div>
+	<div class="row">
+		<div >
+			<h3>¿Quiénes somos?</h3>
+			<p align="justify">El Programa de Tecnología en Cómputo busca establecer un proceso permanente, con herramientas de cómputo, para la formación de personal docente y de investigación, en las diferentes áreas de las Divisiones de la Facultad de Ingeniería, mediante la participación de los integrantes en cursos especializados y en el desarrollo de proyectos.</p>	
+
+			<h3>Objetivo del programa</h3>
+			<p align="justify">Establecer un proceso permanente, con herramientas de cómputo, para la formación de personal docente y de investigación, en las diferentes áreas de las Divisiones de la Facultad de Ingeniería, mediante la participación de los integrantes en cursos especializados y en el desarrollo de proyectos. Así también los seleccionados y subsecuentes serán semilla para nuevas generaciones de becarios.</p>
+
+			<!--div class="col-sm-6"-->
+			<img src="{% static 'media/foto1.jpg' %}" width="300px" align="center">
+			<!--/div-->
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Instituciones</h2>
+			<p>Somos un programa de becarios de la Facultad de Ingeniería de la Universidad Nacional Autónoma de México</p>
+			<img src="{% static 'media/fi.gif' %}">
+			<img src="{% static 'media/unam.png' %}">
+		</div>
+	</div>
+</div>	
+
+{% endblock %}
